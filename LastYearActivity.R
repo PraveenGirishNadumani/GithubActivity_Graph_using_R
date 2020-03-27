@@ -5,9 +5,9 @@ year <- fromJSON("https://api.github.com/repos/razorpay/razorpay-android-sample-
 year$days
 
 #writing the data to csv file using write.csv function 
-write.csv(year$days,"testfile.csv")
+write.csv(year$days,"lastYearData.csv")
 #reading the data from .csv file
-yearData <- read.csv("testfile.csv")
+yearData <- read.csv("lastYearData.csv")
 
 #fetching the weekly data for number of addition and deletion from github API
 weeklyAddDel <- fromJSON("https://api.github.com/repos/razorpay/razorpay-android-sample-app/stats/code_frequency")
